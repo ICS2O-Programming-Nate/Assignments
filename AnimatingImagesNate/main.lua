@@ -15,9 +15,11 @@ local Catbug = display.newImage("Images/Catbug.png", 200, 200)
 local Oswald = display.newImage("Images/Oswald.png", 500, 500)
 local Bear = display.newImage("Images/Bear.png", 800, 200)
 
-Catbug.x = 100
-
+Catbug.x = 200
+Catbug.y = 200
 local function MoveCatbug(event)
 	Catbug.x = Catbug.x + scrollSpeed 
-end 
+	Catbug.alpha = Catbug.alpha - 0.001
+end
+	
 Runtime:addEventListener("enterFrame", MoveCatbug)
