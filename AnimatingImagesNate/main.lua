@@ -12,7 +12,7 @@ display.setStatusBar(display.HiddenStatusBar)
 -- set background 
 local backgroundImage = display.newImageRect("Images/background.jpg", 2048, 1536)
 local Catbug = display.newImage("Images/Catbug.png", 200, 200)
-local Oswald = display.newImage("Images/Oswald.png", 500, 500)
+local Oswald = display.newImage("Images/Oswald.png", 400, 500)
 local Bear = display.newImage("Images/Bear.png", 800, 200)
 
 scrollSpeed1 = 1
@@ -38,10 +38,13 @@ end
 
 Runtime:addEventListener("enterFrame", MoveBear)
 
-
+Oswald.alpha = 0.1
 local function MoveOswald(event)
-	Oswald.x = Oswald.x + scrollSpeed1
-	Oswald.alpha = Oswald.alpha + 0.01 
+	Oswald.x = Oswald.x + scrollSpeed3
+	Oswald.y = Oswald.y + scrollSpeed1
+	Oswald.alpha = Oswald.alpha + 0.009
 end 
 	
 Runtime:addEventListener("enterFrame", MoveOswald)
+
+
