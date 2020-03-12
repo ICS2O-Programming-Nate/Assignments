@@ -21,6 +21,9 @@ scrollSpeed1 = 1
 scrollSpeed2 = 2
 scrollSpeed3 = 3
 
+-- parabolic speeds
+parabolicXSpeed = 5
+parabolicYSpeed = 10
 --------------------------------------------------------
 -- WaddleDee function
 --------------------------------------------------------
@@ -29,8 +32,8 @@ WaddleDee.alpha = 0
 WaddleDee.x = 200
 WaddleDee.y = 350
 local function MoveWaddleDee(event)
-	WaddleDee.x = WaddleDee.x + scrollSpeed3
-	WaddleDee.y = WaddleDee.y - scrollSpeed1
+	WaddleDee.x = WaddleDee.x + parabolicXSpeed
+	WaddleDee.y = WaddleDee.y - parabolicYSpeed
 	WaddleDee.alpha = WaddleDee.alpha + 0.01
 	--make image rotate
 	WaddleDee:rotate(-0.09)
